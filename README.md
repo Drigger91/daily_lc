@@ -1,1 +1,1 @@
-Leetcode daily problems solutions
+Leetcode daily problem solutions
