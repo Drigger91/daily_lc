@@ -2,7 +2,7 @@
 #define pii pair<int, int>
 using namespace std;
 
-int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {
+    int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {
         vector<vector<int>> adj(n + 1);
         for (vector<int>& edge : edges) {
             adj[edge[0]].push_back(edge[1]);
@@ -25,16 +25,16 @@ int secondMinimum(int n, vector<vector<int>>& edges, int time, int change) {
             } else {
                 timeTaken = timeTaken + time;
             }
-            for (int& neighbor : adj[node]) {
-                if (minimum[neighbor] == -1) {
-                    minimum[neighbor] = timeTaken;
-                    q.push({neighbor, 1});
-                } else if (second_minimum[neighbor] == -1 && minimum[neighbor] != timeTaken) {
-                    if (neighbor == n) {
+            for (int& ngb : adj[node]) {
+                if (minimum[ngb] == -1) {
+                    minimum[ngb] = timeTaken;
+                    q.push({ngb, 1});
+                } else if (second_minimum[ngb] == -1 && minimum[ngb] != timeTaken) {
+                    if (ngb == n) {
                         return timeTaken;
                     }
-                    second_minimum[neighbor] = timeTaken;
-                    q.push({neighbor, 2});
+                    second_minimum[ngb] = timeTaken;
+                    q.push({ngb, 2});
                 }
             }
         }
