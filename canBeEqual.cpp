@@ -10,8 +10,8 @@ bool canBeEqual(vector<int>& target, vector<int>& arr) {
     return true;
 }
 int main() {
-	vector<int> nums = {2,4,1,3};
-	vector<int> target = {1,2,3,4};
+	vector<int> nums = {2,4,1,3, 5};
+	vector<int> target = {1,2,3,4, 5};
 	cout << "Ans is: " << canBeEqual(target, nums);
 	return 1;
 
