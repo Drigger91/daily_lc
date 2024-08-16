@@ -1,31 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-void mergeSortedArrays(vector<int>& arr1, vector<int>& arr2, int m) {
-	int n = arr2.size();
-	int i = m - 1;
-	int j = n - 1;
-	int k = m + n - 1;
-	while (i >= 0 && j >= 0) {
-		if (arr1[i] > arr2[j]) {
-			arr1[k--] = arr1[i--];
-		} else {
-			arr1[k--] = arr2[j--];
-		}
+
+bool checkStrings(string s1, string s2) {
+	// one swap means two chars out of place
+
+	if (s1.length() != s2.length()) return false;
+
+	vector<int> index;
+
+	for (int i = 0; i < s1.length(); i++) {
+		if (s1[i] != s2[i]) index.push_back(i);
 	}
-	while (j >= 0) {
-		arr1[k--] = arr2[j--];
-	}
+
+	if (index.size() != 2) return false;
+
+	swap(s1[index[0]], s1[index[1]]);
+
+	return s1 == s2;
 }
-int kadane(vector<int>& nums) {
-	int currentSum = nums[0], maxSum = nums[0];
-	for (int i = 1; i < nums.size(); i++) {
-		currentSum = max(currentSum + nums[i], nums[i]);
-		maxSum = max(currentSum, maxSum);
-	}
-	return maxSum;
-}
-int main() {
-	vector<int> nums = {-1,-2,-300,-100,-5};
-	cout<<" Ans is : " << kadane(nums)<<endl;
+
+
+int main(int argc, char const *argv[]) {
+	bool check = checkStrings("bank", "canb");
+	cout<<"Ans is : " << check;
 	return 0;
-}
+}				

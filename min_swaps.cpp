@@ -38,3 +38,8 @@ int main() {
 	cout << "Ans is : "<< ans<<endl;
 	return 11; 
 }
+
+int main(int argc, char const *argv[]) {
+        /* code */
+        return 0;
+}
