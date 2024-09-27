@@ -5,7 +5,7 @@ class Solution {
 public:
 	class TrieNode {
 	public:
-		unordered_map<char, TrieNode*> children;
+		unordered_map<char, TrieNode*> children;  // Changed to unordered_map to save memory
 		int prefixCount;
 
 		TrieNode() {
