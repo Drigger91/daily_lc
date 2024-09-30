@@ -20,13 +20,6 @@ public:
             if (overlappedBooking > limit) {
                 freq_map[start]--;
                 freq_map[end]++;
-                if (freq_map[start] == 0) {
-                    freq_map.erase(start);
-                }
-                if (freq_map[end] == 0) {
-                    freq_map.erase(end);
-                }
-
                 return false;
             }
         }
