@@ -2,7 +2,6 @@ from typing import List
 
 class Solution:
     def arrayRankTransform(self, arr: List[int]) -> List[int]:
-        rank = []
         _set = set()
         for i in arr:
             _set.add(i)

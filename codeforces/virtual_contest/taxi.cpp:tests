@@ -1,0 +1,31 @@
+[
+	{
+		"correct_answers":
+		[
+			"4",
+			"Ans 3\n4"
+		],
+		"test": "5\n1\n2\n4\n3\n3\n"
+	},
+	{
+		"correct_answers":
+		[
+			"5",
+			"Ans 4\n5"
+		],
+		"test": "8\n2\n3\n4\n4\n2\n1\n3\n1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"1"
+		],
+		"test": "1\n3\n"
+	},
+	{
+		"test": "3\n1\n1\n2\n"
+	},
+	{
+		"test": "3\n1\n1\n2\n"
+	}
+]
