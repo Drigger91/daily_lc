@@ -1,0 +1,42 @@
+Round 1 : Machine Coding (1.5 hrs)
+
+Question: Design a Parking system that has the capability of parking suv, hatchback and bikes. The suv have a rate of 20, hatchback 10 and two wheeler 5 Have to implement the following features: 
+
+1. To be able to calculate rate of parking while checking out the vehicles
+2. To be able to list all the vehicles parked at a particular time
+3. Validation on number of vehicle parked
+4. A hatchback can take suv parking space but a suv can't take hatchbacks parking space, similarly we can park two bikes at suv/hatchback parking space.
+
+
+(can use IDE/ language of your choice)
+
+--> Completed the round with requirement discussion/ implementation in 45 mins. Interviewer expected working code, ran a few test cases of his own. I already covered all the edge cases while implementing so the round got over pretty quickly. 
+
+--> Feedback: Positive
+
+Round 2 : Hiring Manager (aroung 1.5- 2 hrs)
+
+1 : Stuff about resume, current projects explained how a requirement is taken upon from solution design to production deployment. My role in that process, what have I done directly/indirectly to improve business of the company. What tech stack I've been working on and so on. Asked a few questions on current projects that include authorization (jwt) stuff and journey explaination (excalidraw).
+
+2 : Explored some the tech stack that I worked on in little detail 
+	-> kafka - what are offsets, how do you use kafka in your usecase, how offsets are managed. How to have resiliency in kafka applications. How to prevent data loss. What are topics, partitions and stuff like that.
+	-> kubernetes - what are namespaces, what is KEDA
+	-> Some basic stuff about containerisation.
+	-> Authorization/Authentication on exposed APIs on API gateway, strategies to seggeregate the APIs. Some questions on rate limiting, gateway caching. Also discussed rate limiting in slight detail (explaination of token bucket)
+3 : What would be your approach if you want to deploy an application on production from the ground up. (excalidraw)
+    -> asked some basic stuff about scaling and all.
+4: How would you design a payment state machine which needs to communicate with a payment gateway. 
+	There were majorly 2 problems that we discussed along with the design of the service
+	1. Role of idempotency. How to ignore/reduce that.
+	2. The main problem statement was like this: 
+		In a payment lifecycle You'll be communicating with a payment gateway, suppose because of some anomally (network and what not) it can send duplicate callbacks. 
+		Payment Lifecycle: 
+		A payment can exist in multiple states : Created, Pending, Authorised, Failed, Success. (For this discussion we took these only)
+
+		There are some constraints like A payment cannot get authorized twice, it cannot go from pending to created, failed to success and all the basic obvious combinations.
+
+		How can we ensure that our system is able to handle these constraints.
+
+	Explained the brute force way then discussed on my thoughts of how it can be optimised further.
+
+--> Feedback: Positive.
