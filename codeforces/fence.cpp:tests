@@ -1,0 +1,20 @@
+[
+	{
+		"correct_answers":
+		[
+			"3",
+			"new_sum : 9 | new_global_mini : 9 | global_mini : 9\nnew_sum : 8 | new_global_mini : 8 | global_mini : 9\n3"
+		],
+		"test": "7\n3\n1\n2\n6\n1\n1\n7\n1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"5"
+		],
+		"test": "10\n2\n3\n1\n4\n1\n4\n6\n2\n1\n4\n6\n"
+	},
+	{
+		"test": "2\n1\n10\n20\n"
+	}
+]
