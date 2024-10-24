@@ -13,6 +13,8 @@ class Solution:
             return True
         if (not root1 or not root2) :
             return False
+        if (root1.val != root2.val):
+            return False
         
         same = self.flipEquiv(root1.left, root2.left) and self.flipEquiv(root1.right, root2.right)
         flip = self.flipEquiv(root1.right, root2.left) and self.flipEquiv(root1.left, root2.right)
